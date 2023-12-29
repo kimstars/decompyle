@@ -37,13 +37,13 @@ jobs:
           echo "RELEASE_DATE=$(date -u +%d-%b-%Y)" >> ${GITHUB_ENV}
           echo "RELEASE_TIME=$(date -u +%H:%M)" >> ${GITHUB_ENV}
 
-#       - name: Upload artifact
-#         uses: actions/upload-artifact@v3
-#         with:
-#           name: pycdc
-#           path: |
-#             pycdc/pycdc.exe
-#             pycdc/pycdas.exe
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: pycdc
+          path: |
+            pycdc/pycdc.exe
+            pycdc/pycdas.exe
             
       - name: Create release Windows
         uses: ncipollo/release-action@v1.13.0
