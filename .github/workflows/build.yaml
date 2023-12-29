@@ -46,7 +46,7 @@ jobs:
 #             pycdc/pycdas.exe
             
       - name: Create release Windows
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v1.13.0
         with:
           name: Decompyle++ ${{ env.RELEASE_DATE }}
           tag: build-${{ env.RELEASE_DATE }}-${{ env.RELEASE_COMMIT }}
